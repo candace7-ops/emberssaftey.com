@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EMBERS — Wildland Firefighter Safety Armband</title>
+    <meta
+      name="description"
+      content="EMBERS (Early Monitoring + Burn-Endurance Response System) is a vibration-first, screenless early warning armband for wildland firefighters. Patent pending."
+    />
+    <!-- Your CSS file is currently named styls.css -->
+    <link rel="stylesheet" href="styls.css" />
+  </head>
+
+  <body>
+    <!-- Top-left mini logo + acronym -->
+    <header class="topbar">
+      <div class="brand">
+        <!-- Upload a mini logo named embers-mini.png (or embers-mini.svg) -->
+        <img class="brandLogo" src="embers-mini.png" alt="EMBERS mini logo"
+             onerror="this.style.display='none'">
+        <div class="brandText">
+          <div class="brandName">EMBERS</div>
+          <div class="brandSpellout">EARLY MONITORING + BURN ENDURANCE RESPONSE SYSTEM</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div class="badges">
+          <span class="badge">Patent pending</span>
+          <span class="badge subtle">Vibration-first</span>
+          <span class="badge subtle">Screenless • glove-friendly</span>
+          <span class="badge subtle">Wildland firefighter safety</span>
+        </div>
+
+        <h1>Vibration-first, screenless early warning armband for wildland firefighters.</h1>
+
+        <p class="lead">
+          EMBERS is designed for the operational gap: the minutes before an emergency call/Mayday—when heat, exertion,
+          and smoke can stack quickly, while radio contact and visibility are not guaranteed.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#contact">Request a demo / discuss pilots</a>
+          <a class="btn ghost" href="#does">What it does</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Credibility</h2>
+        <p>
+          Selected as a <strong>Top 10 finalist</strong> in the
+          <strong> Central Florida Tech Grove Wildfire Safety Equipment Prize Challenge</strong> (a national competition)
+          executed in partnership with <strong>NAWCTSD</strong> and <strong>SERDP/ESTCP</strong>. Eight finalist teams
+          presented at the live event. I did not place 1st/2nd/3rd, but was close on points and was encouraged to
+          continue development.
+        </p>
+      </section>
+
+      <section class="card" id="problem">
+        <h2>Problem</h2>
+        <p>
+          The operational gap is the minutes before an emergency call/Mayday. Heat, exertion, and smoke can stack quickly,
+          while radio contact and visibility are not guaranteed. Earlier warning can change outcomes.
+        </p>
+      </section>
+
+      <section class="grid" id="does">
+        <div class="card">
+          <h3>Warns the wearer first</h3>
+          <p>Vibration-only alerts (one button; minimal training).</p>
+        </div>
+
+        <div class="card">
+          <h3>Rule-based escalation</h3>
+          <p>
+            Auditable (not black-box AI): <strong>Normal → Warning → Urgent → SOS</strong> only when corroborated risk
+            persists and there is no acknowledgement.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>TEAM‑SOS via LoRa</h3>
+          <p>
+            Sends a local TEAM‑SOS to nearby armbands and a crew receiver via <strong>LoRa</strong>, with optional last-known
+            <strong> GNSS/GPS</strong> location and age-of-fix.
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="how">
+        <h2>How it works (simplified)</h2>
+        <ul class="bullets">
+          <li>Quick baseline (~1–3 minutes) and offline crew check-in using Shift IDs.</li>
+          <li>
+            Monitors trends from heart-rate (PPG; used only when reading quality is good), skin temperature plus a second
+            pod/ambient temperature sensor, motion pattern, and CO trend.
+          </li>
+          <li>Manual SOS always available; acknowledgement prevents escalation; clear requires deliberate action.</li>
+          <li>No phone, towers, or cloud by default; location is sent only in Urgent/SOS (or check-in).</li>
+        </ul>
+      </section>
+
+      <section class="card" id="scope">
+        <h2>Scope and limitations</h2>
+        <ul class="bullets">
+          <li>Complements PPE and the buddy system; does not replace radio Mayday or emergency traffic.</li>
+          <li>Not a medical device; does not measure core body temperature or diagnose.</li>
+          <li>PCM is passive heat buffering for comfort and sensor-contact stability (not active cooling).</li>
+        </ul>
+      </section>
+
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+        <p>If you’re exploring contracts, pilots, procurement, or partnerships, reach out:</p>
+
+        <!-- CHANGE THESE -->
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Phone: <a href="tel:+12135551234">(213) 555-1234</a></p>
+      </section>
+    </main>
+
+    <!-- Bottom explanation + flame logo -->
+    <section class="bottomMark">
+      <p class="embersOneLine">
+        EMBERS is a screenless, vibration-first early warning armband for wildland firefighters.
+      </p>
+
+      <!-- Upload a flame logo named embers-flame.png (or embers-flame.svg) -->
+      <img class="flameLogo" src="embers-flame.png" alt="EMBERS flame logo"
+           onerror="this.style.display='none'">
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
