@@ -22,7 +22,7 @@ a:hover{ opacity: .9; }
 .wrap{
   width: min(980px, 92vw);
   margin: 0 auto;
-  padding-bottom: 140px; /* space so bottom logo doesn't cover content */
+  padding-bottom: 220px; /* space so bottom logo doesn't cover content */
 }
 
 /* Top-left brand */
