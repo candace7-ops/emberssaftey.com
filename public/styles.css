@@ -113,9 +113,9 @@ body{
 
 .tag{ color: var(--muted); }
 
-/* Center row for CTA button */
+/* Center row for CTA button (moved LOWER by increasing margin-top) */
 .cta-row{
-  margin-top: 18px;
+  margin-top: 70px; /* was ~18px; increase/decrease to move the video button up/down */
   display:flex;
   justify-content:center;
 }
@@ -146,9 +146,9 @@ body{
   border-color: rgba(255,106,0,.95);
 }
 
-/* New simple writing under the video */
+/* Simple writing under the video (also moved LOWER by increasing margin-top) */
 .simple-blurb{
-  margin: 16px auto 0 auto;
+  margin: 28px auto 0 auto; /* was 16px auto 0 auto */
   max-width: 920px;
   text-align: center;
   color: var(--muted);
@@ -214,7 +214,8 @@ body{
 @media (max-width: 520px){
   .wordmark .name{ font-size: 44px; }
   .wordmark .acronym{ font-size: 13px; }
-  .simple-blurb{ font-size: 16px; }
+  .cta-row{ margin-top: 42px; } /* keep the button from going too low on phones */
+  .simple-blurb{ font-size: 16px; margin-top: 18px; }
   .one-line{ font-size: 15px; }
   .yt-btn{ min-width: 0; width: 100%; }
   .logo--hero{ height: 210px; }
