@@ -34,7 +34,7 @@ a:hover{ opacity: .9; }
 
 /* Hero */
 .hero{ padding: 10px 0 6px; }
-h1{ font-size: clamp(26px, 4vw, 44px); line-height: 1.12; margin: 10px 0 10px; }
+h1{ font-size: clamp(26px, 4vw, 64px); line-height: 1.12; margin: 10px 0 10px; }
 .lead{ color: var(--muted); max-width: 70ch; margin: 0 0 14px; }
 
 .badges{ display:flex; gap: 10px; flex-wrap: wrap; }
