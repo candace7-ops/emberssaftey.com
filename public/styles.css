@@ -10,6 +10,7 @@
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -17,41 +18,45 @@ body{
   background: var(--bg);
 }
 
-/* Tactical ops background: faint grid + subtle contour-ish lines */
+/* Flat tactical map vibe: near-black with subtle grid + map-like linework */
 .screen{
   min-height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   padding: 28px 22px;
+  background: var(--bg);
 
-  background:
-    /* faint orange glow */
-    radial-gradient(900px 480px at 15% 10%, rgba(255,106,0,.10), transparent 55%),
-    radial-gradient(700px 420px at 85% 90%, rgba(255,106,0,.06), transparent 60%),
-
-    /* subtle contour-like curves */
-    repeating-radial-gradient(circle at 25% 20%,
-      rgba(230,230,230,.04) 0px,
-      rgba(230,230,230,.04) 1px,
-      transparent 10px,
-      transparent 18px),
-
+  background-image:
     /* faint grid */
-    linear-gradient(to right, rgba(230,230,230,.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
+
+    /* “map lines” (gentle, not vortex) */
+    repeating-linear-gradient(
+      12deg,
+      rgba(230,230,230,.035) 0px,
+      rgba(230,230,230,.035) 1px,
+      transparent 18px,
+      transparent 34px
+    ),
+    repeating-linear-gradient(
+      -10deg,
+      rgba(230,230,230,.02) 0px,
+      rgba(230,230,230,.02) 1px,
+      transparent 22px,
+      transparent 44px
+    );
 
   background-size:
-    auto,
-    auto,
-    auto,
-    56px 56px,
-    56px 56px;
+    64px 64px,
+    64px 64px,
+    520px 520px,
+    720px 720px;
 
   background-position:
-    0 0,
-    0 0,
-    0 0,
+    center,
+    center,
     center,
     center;
 }
@@ -117,6 +122,7 @@ body{
   padding-top: 18px;
 }
 
+/* centered one-line description */
 .one-line{
   margin: 0 0 16px 0;
   color: var(--muted);
@@ -124,6 +130,13 @@ body{
   letter-spacing: .02em;
 }
 
+.one-line--center{
+  text-align:center;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+/* bottom hero logo lockup */
 .brand-lockup{
   display:flex;
   align-items:center;
@@ -132,6 +145,14 @@ body{
   border-top: 1px solid rgba(230,230,230,.10);
 }
 
+.brand-lockup--hero{
+  justify-content:center;
+  align-items:flex-end;
+  padding-top: 28px;
+  border-top: 1px solid rgba(230,230,230,.10);
+}
+
+/* default logo */
 .logo{
   height: 54px;
   width: auto;
@@ -139,17 +160,16 @@ body{
   filter: drop-shadow(0 8px 24px rgba(0,0,0,.55));
 }
 
-/* optional flame */
-.flame{
-  height: 44px;
-  width:auto;
-  opacity: .95;
-  filter: drop-shadow(0 10px 22px rgba(255,106,0,.18));
+/* BIG hero logo (adjust height to taste) */
+.logo--hero{
+  height: 140px; /* try 180px or 220px if you want it bigger */
+  max-width: min(86vw, 820px);
+  width: auto;
 }
 
 /* Mobile tweaks */
 @media (max-width: 520px){
   .wordmark .name{ font-size: 36px; }
-  .logo{ height: 48px; }
   .one-line{ font-size: 15px; }
+  .logo--hero{ height: 110px; }
 }
