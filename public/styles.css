@@ -117,7 +117,7 @@ body{
 .cta-row{
   margin-top: 18px;
   display:flex;
-  justify-content:center; /* centers the link/button */
+  justify-content:center;
 }
 
 /* Video button */
@@ -146,9 +146,20 @@ body{
   border-color: rgba(255,106,0,.95);
 }
 
+/* New simple writing under the video */
+.simple-blurb{
+  margin: 16px auto 0 auto;
+  max-width: 920px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 18px;
+  letter-spacing: .02em;
+  line-height: 1.4;
+}
+
 .void{
   flex: 1;
-  min-height: 22vh;
+  min-height: 18vh;
 }
 
 .bottom{
@@ -192,9 +203,9 @@ body{
   filter: drop-shadow(0 10px 26px rgba(0,0,0,.60));
 }
 
-/* BIG hero logo (bigger than before) */
+/* BIG hero logo */
 .logo--hero{
-  height: 320px; /* make logo much bigger */
+  height: 320px;
   max-width: min(92vw, 1100px);
   width: auto;
 }
@@ -203,6 +214,7 @@ body{
 @media (max-width: 520px){
   .wordmark .name{ font-size: 44px; }
   .wordmark .acronym{ font-size: 13px; }
+  .simple-blurb{ font-size: 16px; }
   .one-line{ font-size: 15px; }
   .yt-btn{ min-width: 0; width: 100%; }
   .logo--hero{ height: 210px; }
