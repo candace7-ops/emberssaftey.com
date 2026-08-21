@@ -1,126 +1,198 @@
 :root{
-  --bg:#000;
-  --text:#fff;
-  --muted:rgba(255,255,255,.85);
-  --card: rgba(255,255,255,.06);
-  --border: rgba(255,255,255,.14);
-  --accent: #ff6a2b; /* ember orange */
+  --bg: #0B0F14;
+  --text: #E6E6E6;
+  --muted: rgba(230,230,230,.72);
+  --faint: rgba(230,230,230,.12);
+  --accent: #FF6A00;
+
+  --max: 1100px;
 }
 
 *{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
+html,body{ height:100%; }
+
 body{
-  font-family: Arial, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin:0;
+  font-family: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  line-height: 1.55;
   background: var(--bg);
 }
 
-a{ color: var(--text); }
-a:hover{ opacity: .9; }
+/* Flat tactical map vibe: near-black with subtle grid + map-like linework */
+.screen{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding: 28px 22px;
+  background: var(--bg);
 
-.wrap{
-  width: min(980px, 92vw);
+  background-image:
+    /* faint grid */
+    linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
+
+    /* “map lines” (gentle, not vortex) */
+    repeating-linear-gradient(
+      12deg,
+      rgba(230,230,230,.035) 0px,
+      rgba(230,230,230,.035) 1px,
+      transparent 18px,
+      transparent 34px
+    ),
+    repeating-linear-gradient(
+      -10deg,
+      rgba(230,230,230,.02) 0px,
+      rgba(230,230,230,.02) 1px,
+      transparent 22px,
+      transparent 44px
+    );
+
+  background-size:
+    64px 64px,
+    64px 64px,
+    520px 520px,
+    720px 720px;
+
+  background-position:
+    center,
+    center,
+    center,
+    center;
+}
+
+.top, .bottom{
+  max-width: var(--max);
+  width: 100%;
   margin: 0 auto;
-  padding-bottom: 220px; /* space so bottom logo doesn't cover content */
 }
 
-/* Top-left brand */
-.topbar{ padding: 16px 18px; }
-.brand{ display:flex; align-items:center; gap: 12px; }
-.brandLogo{ width: 34px; height: 34px; object-fit: contain; }
-.brandName{ font-weight: 900; letter-spacing: .4px; line-height: 1.05; }
-.brandSpellout{ font-size: 12px; opacity: .92; letter-spacing: .25px; margin-top: 2px; }
+.wordmark .name{
+  font-size: 64px; /* bigger top-left EMBERS */
+  letter-spacing: .08em;
+  font-weight: 600;
+  line-height: 1;
+}
 
-/* Hero */
-.hero{ padding: 10px 0 6px; }
-h1{ font-size: clamp(26px, 4vw, 64px); line-height: 1.12; margin: 10px 0 10px; }
-.lead{ color: var(--muted); max-width: 70ch; margin: 0 0 14px; }
+.wordmark .acronym{
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 
-.badges{ display:flex; gap: 10px; flex-wrap: wrap; }
-.badge{
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.06);
-  padding: 7px 10px;
+.status{
+  margin-top: 16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  align-items:center;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .04em;
+}
+
+.pill{
+  border: 1px solid rgba(255,106,0,.55);
+  color: var(--text);
+  padding: 6px 10px;
   border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
   font-size: 12px;
-  font-weight: 700;
+  background: rgba(255,106,0,.08);
 }
-.badge.subtle{ opacity: .9; }
 
-.cta{ display:flex; gap: 10px; flex-wrap: wrap; margin: 10px 0 6px; }
-.btn{
+.dot{
+  width:6px; height:6px;
+  border-radius:99px;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(255,106,0,.55);
+}
+
+.tag{ color: var(--muted); }
+
+/* YouTube button (add matching <a class="yt-btn" ...> in index.html) */
+.yt-btn{
   display:inline-flex;
   align-items:center;
-  justify-content:center;
+  gap:10px;
+  margin-top: 16px;
   padding: 10px 14px;
   border-radius: 12px;
-  background: var(--accent);
-  color: #1b0c07;
-  font-weight: 900;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,.12);
-}
-.btn:hover{ filter: brightness(1.05); }
-.btn.ghost{
-  background: transparent;
+  border: 1px solid rgba(255,106,0,.65);
+  background: rgba(255,106,0,.08);
   color: var(--text);
-  border: 1px solid var(--border);
+  text-decoration:none;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  font-size: 12px;
 }
 
-/* Cards / sections */
-.card{
-  margin: 14px 0;
-  padding: 16px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-}
-h2{ margin: 0 0 10px; font-size: 18px; }
-h3{ margin: 0 0 8px; font-size: 16px; }
-
-.grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 14px 0;
+.yt-btn:hover{
+  background: rgba(255,106,0,.14);
+  border-color: rgba(255,106,0,.9);
 }
 
-.bullets{ margin: 0; padding-left: 18px; color: var(--muted); }
-.bullets li{ margin: 8px 0; }
-
-/* Bottom explanation + flame logo */
-.bottomMark{
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 12px;
-  display: grid;
-  gap: 10px;
-  place-items: center;
-  padding: 0 14px;
-  text-align: center;
+.void{
+  flex: 1;
+  min-height: 24vh;
 }
 
-.embersOneLine{
-  margin: 0;
-  font-size: 13px;
-  opacity: .95;
-  max-width: 920px;
+.bottom{
+  padding-top: 18px;
 }
 
-.flameLogo{
-  height: 62px;
+/* centered one-line description */
+.one-line{
+  margin: 0 0 16px 0;
+  color: var(--muted);
+  font-size: 16px;
+  letter-spacing: .02em;
+}
+
+.one-line--center{
+  text-align:center;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+/* bottom hero logo lockup */
+.brand-lockup{
+  display:flex;
+  align-items:center;
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(230,230,230,.10);
+}
+
+.brand-lockup--hero{
+  justify-content:center;
+  align-items:flex-end;
+  padding-top: 28px;
+  border-top: 1px solid rgba(230,230,230,.10);
+}
+
+/* default logo */
+.logo{
+  height: 54px;
   width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));
+  display:block;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.55));
 }
 
-@media (max-width: 860px){
-  .grid{ grid-template-columns: 1fr; }
+/* BIG hero logo (adjust height to taste) */
+.logo--hero{
+  height: 220px; /* bigger bottom logo */
+  max-width: min(90vw, 980px);
+  width: auto;
 }
 
+/* Mobile tweaks */
 @media (max-width: 520px){
-  .brandSpellout{ font-size: 11px; }
-  .flameLogo{ height: 54px; }
+  .wordmark .name{ font-size: 44px; }
+  .wordmark .acronym{ font-size: 13px; }
+  .one-line{ font-size: 15px; }
+  .logo--hero{ height: 160px; }
 }
