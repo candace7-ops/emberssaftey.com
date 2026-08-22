@@ -1,0 +1,92 @@
+:root{
+  --bg: #0B0F14;
+  --text: #E6E6E6;
+  --muted: rgba(230,230,230,.72);
+  --accent: #FF6A00;
+  --max: 1100px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Flat tactical map vibe */
+.screen{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding: 28px 22px;
+  background: var(--bg);
+
+  background-image:
+    linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
+    repeating-linear-gradient(
+      12deg,
+      rgba(230,230,230,.035) 0px,
+      rgba(230,230,230,.035) 1px,
+      transparent 18px,
+      transparent 34px
+    ),
+    repeating-linear-gradient(
+      -10deg,
+      rgba(230,230,230,.02) 0px,
+      rgba(230,230,230,.02) 1px,
+      transparent 22px,
+      transparent 44px
+    );
+
+  background-size:
+    64px 64px,
+    64px 64px,
+    520px 520px,
+    720px 720px;
+
+  background-position: center, center, center, center;
+}
+
+.top, .bottom{
+  max-width: var(--max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wordmark .name{
+  font-size: 64px;
+  letter-spacing: .08em;
+  font-weight: 600;
+  line-height: 1;
+  display:inline-block;
+}
+
+/* REAL underline element (will always show IF this CSS file is loaded) */
+.wordmark .name .underline{
+  display:block;
+  margin-top: 10px;
+  width: 88px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(255,106,0,.35);
+}
+
+.wordmark .acronym{
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.status{
+  margin-top: 16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10
