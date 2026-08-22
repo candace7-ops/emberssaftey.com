@@ -2,9 +2,7 @@
   --bg: #0B0F14;
   --text: #E6E6E6;
   --muted: rgba(230,230,230,.72);
-  --faint: rgba(230,230,230,.12);
   --accent: #FF6A00;
-
   --max: 1100px;
 }
 
@@ -18,7 +16,7 @@ body{
   background: var(--bg);
 }
 
-/* Flat tactical map vibe: near-black with subtle grid + map-like linework */
+/* Flat tactical map vibe */
 .screen{
   min-height:100vh;
   display:flex;
@@ -30,15 +28,13 @@ body{
   background-image:
     linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
-    repeating-linear-gradient(
-      12deg,
+    repeating-linear-gradient(12deg,
       rgba(230,230,230,.035) 0px,
       rgba(230,230,230,.035) 1px,
       transparent 18px,
       transparent 34px
     ),
-    repeating-linear-gradient(
-      -10deg,
+    repeating-linear-gradient(-10deg,
       rgba(230,230,230,.02) 0px,
       rgba(230,230,230,.02) 1px,
       transparent 22px,
@@ -65,6 +61,18 @@ body{
   letter-spacing: .08em;
   font-weight: 600;
   line-height: 1;
+  display:inline-block;
+}
+
+/* REAL underline element (will always show) */
+.wordmark .name .underline{
+  display:block;
+  margin-top: 10px;
+  width: 88px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(255,106,0,.35);
 }
 
 .wordmark .acronym{
@@ -72,7 +80,7 @@ body{
   font-size: 14px;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(230,230,230,.72);
 }
 
 .status{
@@ -81,7 +89,7 @@ body{
   flex-wrap:wrap;
   gap: 10px;
   align-items:center;
-  color: var(--muted);
+  color: rgba(230,230,230,.72);
   font-size: 14px;
   letter-spacing: .04em;
 }
@@ -104,16 +112,15 @@ body{
   box-shadow: 0 0 18px rgba(255,106,0,.55);
 }
 
-.tag{ color: var(--muted); }
+.tag{ color: rgba(230,230,230,.72); }
 
-/* Center row for CTA button */
+/* CTA */
 .cta-row{
   margin-top: 70px;
   display:flex;
   justify-content:center;
 }
 
-/* Video button */
 .yt-btn{
   display:inline-flex;
   align-items:center;
@@ -139,18 +146,18 @@ body{
   border-color: rgba(255,106,0,.95);
 }
 
-/* Simple writing under the video */
+/* Description under CTA */
 .simple-blurb{
   margin: 28px auto 0 auto;
   max-width: 920px;
   text-align: center;
-  color: var(--muted);
+  color: rgba(230,230,230,.72);
   font-size: 18px;
   letter-spacing: .02em;
   line-height: 1.4;
 }
 
-/* Pull the bottom (logo/flame) UP */
+/* Pull logo higher */
 .void{
   flex: 0.15;
   min-height: 0;
@@ -162,7 +169,7 @@ body{
 
 .one-line{
   margin: 0;
-  color: var(--muted);
+  color: rgba(230,230,230,.72);
   font-size: 16px;
   letter-spacing: .02em;
 }
@@ -172,11 +179,11 @@ body{
   margin-top: 14px;
 }
 
-/* Contact line */
+/* Contact */
 .contact-line{
   margin: 10px 0 0 0;
   text-align:center;
-  color: var(--muted);
+  color: rgba(230,230,230,.72);
   font-size: 14px;
   letter-spacing: .04em;
   text-transform: uppercase;
@@ -193,7 +200,7 @@ body{
   border-bottom-color: rgba(255,106,0,.95);
 }
 
-/* bottom hero logo lockup */
+/* Big logo */
 .brand-lockup{
   display:flex;
   align-items:center;
@@ -222,29 +229,10 @@ body{
   width: auto;
 }
 
-/* --- GUARANTEED orange underline under EMBERS (force-applied) --- */
-.wordmark .name{
-  position: relative !important;
-  display: inline-block !important;
-  padding-bottom: 10px !important;
-}
-
-.wordmark .name::after{
-  content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: 0 !important;
-  width: 88px !important;
-  height: 3px !important;
-  background: #FF6A00 !important;
-  border-radius: 999px !important;
-  box-shadow: 0 0 18px rgba(255,106,0,.35) !important;
-}
-
-/* Mobile tweaks */
+/* Mobile */
 @media (max-width: 520px){
   .wordmark .name{ font-size: 44px; }
-  .wordmark .name::after{ width: 64px; }
+  .wordmark .name .underline{ width: 64px; }
   .wordmark .acronym{ font-size: 13px; }
   .cta-row{ margin-top: 42px; }
   .simple-blurb{ font-size: 16px; margin-top: 18px; }
