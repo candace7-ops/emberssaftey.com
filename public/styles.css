@@ -157,15 +157,14 @@ body{
   line-height: 1.4;
 }
 
-/* This controls the empty middle space.
-   Smaller values pull the logo UP so it shows sooner on load. */
+/* Pull the bottom (logo/flame) UP so it shows without scrolling */
 .void{
-  flex: 0.4;
-  min-height: 6vh;
+  flex: 0.15;
+  min-height: 0;
 }
 
 .bottom{
-  padding-top: 18px;
+  padding-top: 14px;
 }
 
 /* centered one-line description */
@@ -178,7 +177,28 @@ body{
 
 .one-line--center{
   text-align:center;
-  margin-top: 18px;
+  margin-top: 14px;
+}
+
+/* Contact line */
+.contact-line{
+  margin: 10px 0 0 0;
+  text-align:center;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.contact-link{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,106,0,.55);
+  padding-bottom: 2px;
+}
+
+.contact-link:hover{
+  border-bottom-color: rgba(255,106,0,.95);
 }
 
 /* bottom hero logo lockup */
@@ -193,7 +213,7 @@ body{
 .brand-lockup--hero{
   justify-content:center;
   align-items:flex-end;
-  padding-top: 16px; /* reduced from 34px to bring logo up */
+  padding-top: 12px; /* reduced to bring logo up */
   border-top: 1px solid rgba(230,230,230,.10);
 }
 
@@ -220,6 +240,6 @@ body{
   .simple-blurb{ font-size: 16px; margin-top: 18px; }
   .one-line{ font-size: 15px; }
   .yt-btn{ min-width: 0; width: 100%; }
-  .void{ flex: 0.25; min-height: 0; }
+  .void{ flex: 0.10; min-height: 0; }
   .logo--hero{ height: 210px; }
 }
