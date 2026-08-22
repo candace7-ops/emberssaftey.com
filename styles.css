@@ -28,11 +28,8 @@ body{
   background: var(--bg);
 
   background-image:
-    /* faint grid */
     linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
-
-    /* “map lines” (gentle, not vortex) */
     repeating-linear-gradient(
       12deg,
       rgba(230,230,230,.035) 0px,
@@ -54,11 +51,7 @@ body{
     520px 520px,
     720px 720px;
 
-  background-position:
-    center,
-    center,
-    center,
-    center;
+  background-position: center, center, center, center;
 }
 
 .top, .bottom{
@@ -72,23 +65,6 @@ body{
   letter-spacing: .08em;
   font-weight: 600;
   line-height: 1;
-
-  /* orange underline */
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-.wordmark .name::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 88px;          /* underline length */
-  height: 3px;          /* underline thickness */
-  background: var(--accent);
-  border-radius: 999px;
-  box-shadow: 0 0 18px rgba(255,106,0,.35);
 }
 
 .wordmark .acronym{
@@ -130,7 +106,7 @@ body{
 
 .tag{ color: var(--muted); }
 
-/* Center row for CTA button (controls how far down the video button starts) */
+/* Center row for CTA button */
 .cta-row{
   margin-top: 70px;
   display:flex;
@@ -174,7 +150,7 @@ body{
   line-height: 1.4;
 }
 
-/* Pull the bottom (logo/flame) UP so it shows without scrolling */
+/* Pull the bottom (logo/flame) UP */
 .void{
   flex: 0.15;
   min-height: 0;
@@ -184,7 +160,6 @@ body{
   padding-top: 14px;
 }
 
-/* centered one-line description */
 .one-line{
   margin: 0;
   color: var(--muted);
@@ -234,7 +209,6 @@ body{
   border-top: 1px solid rgba(230,230,230,.10);
 }
 
-/* default logo */
 .logo{
   height: 54px;
   width: auto;
@@ -242,11 +216,29 @@ body{
   filter: drop-shadow(0 10px 26px rgba(0,0,0,.60));
 }
 
-/* BIG hero logo */
 .logo--hero{
   height: 320px;
   max-width: min(92vw, 1100px);
   width: auto;
+}
+
+/* --- GUARANTEED orange underline under EMBERS (force-applied) --- */
+.wordmark .name{
+  position: relative !important;
+  display: inline-block !important;
+  padding-bottom: 10px !important;
+}
+
+.wordmark .name::after{
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 88px !important;
+  height: 3px !important;
+  background: #FF6A00 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 0 18px rgba(255,106,0,.35) !important;
 }
 
 /* Mobile tweaks */
