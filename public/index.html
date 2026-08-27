@@ -1,61 +1,215 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EMBERS</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMBERS — Wildland Firefighter Safety Armband</title>
 
-  <!-- Oswald font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="EMBERS is a screenless, vibration-first early warning armband for wildland firefighters—delivering early warnings through haptics, with an optional audible alert."
+    />
 
-  <link rel="stylesheet" href="./styles.css" />
-</head>
+    <meta property="og:title" content="EMBERS — Early Monitoring + Burn‑Endurance Response System" />
+    <meta
+      property="og:description"
+      content="Wildland Firefighter Safety Armband — vibration‑first early warning (screenless, glove‑friendly)."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="embers-logo.png" />
 
-<body>
-  <main class="screen">
-    <header class="top">
-      <div class="wordmark">
-        <div class="name">EMBERS</div>
-        <div class="acronym">EARLY MONITORING + BURN‑ENDURANCE RESPONSE SYSTEM</div>
-      </div>
+    <!-- Keep YOUR font: no external font imports -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
 
-      <div class="status">
-        <span class="pill">PATENT PENDING</span>
-        <span class="dot"></span>
-        <span class="tag">Wildland Firefighter Safety Armband — vibration‑first early warning (screenless, glove‑friendly)</span>
-      </div>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="cta-row">
-        <a class="yt-btn yt-btn--primary"
-           href="https://www.youtube.com/watch?v=4FvP-EvXo1s"
-           target="_blank"
-           rel="noopener noreferrer">
-          Watch the overview video
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="brand" href="#top">
+          <img class="brand__mark" src="embers-logo.png" alt="EMBERS logo" />
+          <span class="brand__name">EMBERS</span>
         </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#product">Product</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
 
-      <p class="simple-blurb">
-        A screenless, vibration‑first safety armband for wildland firefighters—delivering early warnings through haptics, with an optional audible alert.
-      </p>
+      <div class="container nav__mobile" hidden>
+        <a href="#product">Product</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
     </header>
 
-    <section class="void" aria-hidden="true"></section>
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="badges">
+              <span class="badge">Patent Pending</span>
+              <span class="badge badge--muted">Wildland Firefighter Safety</span>
+              <span class="badge badge--muted">Screenless • Glove‑friendly</span>
+            </div>
 
-    <footer class="bottom">
-      <div class="brand-lockup brand-lockup--hero">
-        <img class="logo logo--hero" src="./assets/embers-logo.png" alt="EMBERS logo">
+            <h1 class="hero__title">EMBERS</h1>
+
+            <p class="hero__kicker">EARLY MONITORING + BURN‑ENDURANCE RESPONSE SYSTEM</p>
+
+            <p class="hero__sub">
+              Wildland Firefighter Safety Armband — vibration‑first early warning (screenless, glove‑friendly).
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="https://www.youtube.com/watch?v=4FvP-EvXo1s" target="_blank" rel="noreferrer">
+                Watch the overview video
+              </a>
+            </div>
+
+            <p class="hero__note">
+              A screenless, vibration‑first safety armband for wildland firefighters—delivering early warnings through
+              haptics, with an optional audible alert.
+            </p>
+          </div>
+
+          <div class="hero__cardwrap" aria-hidden="true">
+            <div class="card">
+              <div class="card__top">
+                <div class="dot dot--red"></div>
+                <div class="dot dot--amber"></div>
+                <div class="dot dot--green"></div>
+              </div>
+              <div class="card__body">
+                <div class="glow"></div>
+
+                <div class="row">
+                  <div class="row__k">Signal</div>
+                  <div class="row__v">Haptics‑first</div>
+                </div>
+                <div class="row">
+                  <div class="row__k">Interface</div>
+                  <div class="row__v">Screenless</div>
+                </div>
+                <div class="row">
+                  <div class="row__k">Use</div>
+                  <div class="row__v">Wildland Ops</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mini">
+              <div class="mini__t">Designed for field constraints</div>
+              <div class="mini__tags">
+                <span>Gloves</span><span>Smoke</span><span>Noise</span><span>Stress</span><span>Heat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="product" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Product</h2>
+            <p>Fast to understand. Fast to act on.</p>
+          </div>
+
+          <div class="grid3">
+            <article class="feature">
+              <h3>Vibration‑first alerts</h3>
+              <p>Early warnings delivered through haptics—built for moments when screens aren’t practical.</p>
+            </article>
+            <article class="feature">
+              <h3>Screenless by design</h3>
+              <p>Glove‑friendly, distraction‑resistant signaling intended for high‑stress environments.</p>
+            </article>
+            <article class="feature">
+              <h3>Optional audible alert</h3>
+              <p>Use sound when operational context allows. Haptics remain the primary channel.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>About EMBERS</h2>
+            <p>
+              EMBERS is a screenless, vibration‑first early warning armband for wildland firefighters.
+              Built to keep interaction simple and glove‑friendly.
+            </p>
+          </div>
+
+          <div class="callout">
+            <div>
+              <div class="callout__title">Clear signal. Minimal interaction.</div>
+              <div class="callout__text">No scrolling UI—just an alert you can feel.</div>
+            </div>
+            <a class="btn btn--secondary" href="https://www.youtube.com/watch?v=4FvP-EvXo1s" target="_blank" rel="noreferrer">
+              Watch video
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Contact</h2>
+            <p>Email is best.</p>
+          </div>
+
+          <div class="contact">
+            <div class="contact__left">
+              <div class="contact__label">Contact</div>
+              <a class="contact__email" href="mailto:info@emberssafety.com">info@emberssafety.com</a>
+              <div class="contact__hint">For pilots, partnerships, and general inquiries.</div>
+            </div>
+
+            <div class="contact__right">
+              <div class="contact__box">
+                <div class="contact__boxTitle">Quick email template</div>
+                <pre class="contact__template" id="emailTemplate">Subject: EMBERS — Inquiry
+
+Hi EMBERS team,
+
+My name is ______. I’m reaching out about ______.
+
+Best,
+______</pre>
+                <button class="btn btn--ghost" type="button" id="copyBtn">Copy template</button>
+                <div class="contact__copied" id="copiedNote" hidden>Copied.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <img src="embers-logo.png" alt="" />
+          <div>
+            <div class="footer__name">EMBERS</div>
+            <div class="footer__tag">Early Monitoring + Burn‑Endurance Response System</div>
+          </div>
+        </div>
+
+        <div class="footer__meta">
+          © <span id="year"></span> EMBERS Safety
+        </div>
       </div>
-
-      <p class="one-line one-line--center">
-        EMBERS is a screenless, vibration‑first early warning armband for wildland firefighters.
-      </p>
-
-      <p class="contact-line">
-        Contact: <a class="contact-link" href="mailto:info@emberssafety.com">info@emberssafety.com</a>
-      </p>
     </footer>
-  </main>
-</body>
+  </body>
 </html>
