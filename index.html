@@ -1,65 +1,62 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EMBERS</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMBERS — Wildland Firefighter Safety Armband</title>
+    <meta
+      name="description"
+      content="EMBERS is a screenless, vibration-first early warning safety armband for wildland firefighters—delivering alerts through haptics, with an optional audible alert."
+    />
 
-  <!-- Oswald font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Social cards -->
+    <meta property="og:title" content="EMBERS — Early Monitoring + Burn‑Endurance Response System" />
+    <meta
+      property="og:description"
+      content="Wildland Firefighter Safety Armband — vibration-first early warning (screenless, glove-friendly)."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="embers-logo.png" />
 
-  <!-- IMPORTANT: point to the NEW css file -->
-  <link rel="stylesheet" href="./styles-v2.css" />
-</head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <main class="screen">
-    <header class="top">
-      <div class="wordmark">
-        <div class="name">
-          EMBERS
-          <span class="underline" aria-hidden="true"></span>
-        </div>
-        <div class="acronym">EARLY MONITORING + BURN‑ENDURANCE RESPONSE SYSTEM</div>
-      </div>
+    <link rel="stylesheet" href="styles-v2.css" />
+    <script defer src="script.js"></script>
+  </head>
 
-      <div class="status">
-        <span class="pill">PATENT PENDING</span>
-        <span class="dot"></span>
-        <span class="tag">Wildland Firefighter Safety Armband — vibration‑first early warning (screenless, glove‑friendly)</span>
-      </div>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="cta-row">
-        <a class="yt-btn yt-btn--primary"
-           href="https://www.youtube.com/watch?v=4FvP-EvXo1s"
-           target="_blank"
-           rel="noopener noreferrer">
-          Watch the overview video
+    <!-- Top nav -->
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="brand" href="#">
+          <img class="brand__mark" src="embers-logo.png" alt="EMBERS logo" />
+          <span class="brand__name">EMBERS</span>
         </a>
-      </div>
 
-      <p class="simple-blurb">
-        A screenless, vibration‑first safety armband for wildland firefighters—delivering early warnings through haptics, with an optional audible alert.
-      </p>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#product">Product</a>
+          <a href="#how">How it works</a>
+          <a href="#integration">Integration</a>
+          <a class="btn btn--ghost" href="#contact">Contact</a>
+        </nav>
+
+        <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
-    <section class="void" aria-hidden="true"></section>
-
-    <footer class="bottom">
-      <div class="brand-lockup brand-lockup--hero">
-        <img class="logo logo--hero" src="./assets/embers-logo.png" alt="EMBERS logo">
-      </div>
-
-      <p class="one-line one-line--center">
-        EMBERS is a screenless, vibration‑first early warning armband for wildland firefighters.
-      </p>
-
-      <p class="contact-line">
-        Contact: <a class="contact-link" href="mailto:info@emberssafety.com">info@emberssafety.com</a>
-      </p>
-    </footer>
-  </main>
-</body>
-</html>
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class
