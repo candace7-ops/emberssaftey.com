@@ -68,12 +68,15 @@ body{
   font-weight: 600;
   line-height: 1;
   display: inline-block;
+  position: relative;
+  padding-bottom: 12px;
 }
 
 .wordmark .name .name-underline{
-  display:block;
-  margin-top: 10px;
-  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 18px;
   height: 2px;
   background: var(--accent);
   border-radius: 999px;
@@ -231,8 +234,8 @@ body{
 }
 
 @media (max-width: 520px){
-  .wordmark .name{ font-size: 44px; }
-  .wordmark .name .name-underline{ margin-top: 8px; height: 2px; }
+  .wordmark .name{ font-size: 44px; padding-bottom: 10px; }
+  .wordmark .name .name-underline{ width: 14px; height: 2px; }
   .wordmark .acronym{ font-size: 13px; }
   .cta-row{ margin-top: 42px; }
   .simple-blurb{ font-size: 16px; margin-top: 18px; }
