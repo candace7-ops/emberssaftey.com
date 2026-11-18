@@ -4,7 +4,6 @@
   --muted: rgba(230,230,230,.72);
   --faint: rgba(230,230,230,.12);
   --accent: #FF6A00;
-
   --max: 1100px;
 }
 
@@ -18,7 +17,6 @@ body{
   background: var(--bg);
 }
 
-/* Flat tactical map vibe: near-black with subtle grid + map-like linework */
 .screen{
   min-height:100vh;
   display:flex;
@@ -28,11 +26,8 @@ body{
   background: var(--bg);
 
   background-image:
-    /* faint grid */
     linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
-
-    /* “map lines” (gentle, not vortex) */
     repeating-linear-gradient(
       12deg,
       rgba(230,230,230,.035) 0px,
@@ -72,6 +67,18 @@ body{
   letter-spacing: .08em;
   font-weight: 600;
   line-height: 1;
+  display: inline-block;
+}
+
+.wordmark .name .name-underline{
+  display:block;
+  margin-top: 10px;
+  width: 1.4em;
+  max-width: 120px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(255,106,0,.35);
 }
 
 .wordmark .acronym{
@@ -105,7 +112,8 @@ body{
 }
 
 .dot{
-  width:6px; height:6px;
+  width:6px;
+  height:6px;
   border-radius:99px;
   background: var(--accent);
   box-shadow: 0 0 18px rgba(255,106,0,.55);
@@ -113,14 +121,12 @@ body{
 
 .tag{ color: var(--muted); }
 
-/* Center row for CTA button (controls how far down the video button starts) */
 .cta-row{
   margin-top: 70px;
   display:flex;
   justify-content:center;
 }
 
-/* Video button */
 .yt-btn{
   display:inline-flex;
   align-items:center;
@@ -146,7 +152,6 @@ body{
   border-color: rgba(255,106,0,.95);
 }
 
-/* Simple writing under the video */
 .simple-blurb{
   margin: 28px auto 0 auto;
   max-width: 920px;
@@ -157,7 +162,6 @@ body{
   line-height: 1.4;
 }
 
-/* Pull the bottom (logo/flame) UP so it shows without scrolling */
 .void{
   flex: 0.15;
   min-height: 0;
@@ -167,7 +171,6 @@ body{
   padding-top: 14px;
 }
 
-/* centered one-line description */
 .one-line{
   margin: 0;
   color: var(--muted);
@@ -180,7 +183,6 @@ body{
   margin-top: 14px;
 }
 
-/* Contact line */
 .contact-line{
   margin: 10px 0 0 0;
   text-align:center;
@@ -201,7 +203,6 @@ body{
   border-bottom-color: rgba(255,106,0,.95);
 }
 
-/* bottom hero logo lockup */
 .brand-lockup{
   display:flex;
   align-items:center;
@@ -213,11 +214,10 @@ body{
 .brand-lockup--hero{
   justify-content:center;
   align-items:flex-end;
-  padding-top: 12px; /* reduced to bring logo up */
+  padding-top: 12px;
   border-top: 1px solid rgba(230,230,230,.10);
 }
 
-/* default logo */
 .logo{
   height: 54px;
   width: auto;
@@ -225,16 +225,15 @@ body{
   filter: drop-shadow(0 10px 26px rgba(0,0,0,.60));
 }
 
-/* BIG hero logo */
 .logo--hero{
   height: 320px;
   max-width: min(92vw, 1100px);
   width: auto;
 }
 
-/* Mobile tweaks */
 @media (max-width: 520px){
   .wordmark .name{ font-size: 44px; }
+  .wordmark .name .name-underline{ margin-top: 8px; height: 2px; }
   .wordmark .acronym{ font-size: 13px; }
   .cta-row{ margin-top: 42px; }
   .simple-blurb{ font-size: 16px; margin-top: 18px; }
@@ -243,3 +242,7 @@ body{
   .void{ flex: 0.10; min-height: 0; }
   .logo--hero{ height: 210px; }
 }
+
+After you commit/publish those two public files, check:
+view-source:https://www.emberssafety.com/
+Search for: name-underline
