@@ -1,67 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EMBERS</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-
-<body>
-  <main class="screen">
-    <header class="top">
-      <div class="wordmark">
-        <div class="name">
-          EMBERS
-          <span class="name-underline" aria-hidden="true"></span>
-        </div>
-        <div class="acronym">EARLY MONITORING + BURN‑ENDURANCE RESPONSE SYSTEM</div>
-      </div>
-
-      <div class="status">
-        <span class="pill">PATENT PENDING</span>
-        <span class="dot"></span>
-        <span class="tag">Wildland Firefighter Safety Armband — vibration‑first early warning (screenless, glove‑friendly)</span>
-      </div>
-
-      <div class="cta-row">
-        <a class="yt-btn yt-btn--primary"
-           href="https://www.youtube.com/watch?v=4FvP-EvXo1s"
-           target="_blank"
-           rel="noopener noreferrer">
-          Watch the overview video
-        </a>
-      </div>
-
-      <p class="simple-blurb">
-        A screenless, vibration‑first safety armband for wildland firefighters—delivering early warnings through haptics, with an optional audible alert.
-      </p>
-    </header>
-
-    <section class="void" aria-hidden="true"></section>
-
-    <footer class="bottom">
-      <div class="brand-lockup brand-lockup--hero">
-        <img class="logo logo--hero" src="./assets/embers-logo.png" alt="EMBERS logo">
-      </div>
-
-      <p class="one-line one-line--center">
-        EMBERS is a screenless, vibration‑first early warning armband for wildland firefighters.
-      </p>
-
-      <p class="contact-line">
-        Contact: <a class="contact-link" href="mailto:info@emberssafety.com">info@emberssafety.com</a>
-      </p>
-    </footer>
-  </main>
-</body>
-</html>
-
 :root{
   --bg: #0B0F14;
   --text: #E6E6E6;
@@ -82,7 +18,6 @@ body{
   background: var(--bg);
 }
 
-/* Flat tactical map vibe: near-black with subtle grid + map-like linework */
 .screen{
   min-height:100vh;
   display:flex;
@@ -92,11 +27,8 @@ body{
   background: var(--bg);
 
   background-image:
-    /* faint grid */
     linear-gradient(to right, rgba(230,230,230,.045) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(230,230,230,.04) 1px, transparent 1px),
-
-    /* “map lines” (gentle, not vortex) */
     repeating-linear-gradient(
       12deg,
       rgba(230,230,230,.035) 0px,
@@ -181,7 +113,8 @@ body{
 }
 
 .dot{
-  width:6px; height:6px;
+  width:6px;
+  height:6px;
   border-radius:99px;
   background: var(--accent);
   box-shadow: 0 0 18px rgba(255,106,0,.55);
@@ -189,14 +122,12 @@ body{
 
 .tag{ color: var(--muted); }
 
-/* Center row for CTA button (controls how far down the video button starts) */
 .cta-row{
   margin-top: 70px;
   display:flex;
   justify-content:center;
 }
 
-/* Video button */
 .yt-btn{
   display:inline-flex;
   align-items:center;
@@ -222,7 +153,6 @@ body{
   border-color: rgba(255,106,0,.95);
 }
 
-/* Simple writing under the video */
 .simple-blurb{
   margin: 28px auto 0 auto;
   max-width: 920px;
@@ -233,7 +163,6 @@ body{
   line-height: 1.4;
 }
 
-/* Pull the bottom (logo/flame) UP so it shows without scrolling */
 .void{
   flex: 0.15;
   min-height: 0;
@@ -243,7 +172,6 @@ body{
   padding-top: 14px;
 }
 
-/* centered one-line description */
 .one-line{
   margin: 0;
   color: var(--muted);
@@ -256,7 +184,6 @@ body{
   margin-top: 14px;
 }
 
-/* Contact line */
 .contact-line{
   margin: 10px 0 0 0;
   text-align:center;
@@ -277,7 +204,6 @@ body{
   border-bottom-color: rgba(255,106,0,.95);
 }
 
-/* bottom hero logo lockup */
 .brand-lockup{
   display:flex;
   align-items:center;
@@ -293,7 +219,6 @@ body{
   border-top: 1px solid rgba(230,230,230,.10);
 }
 
-/* default logo */
 .logo{
   height: 54px;
   width: auto;
@@ -301,14 +226,12 @@ body{
   filter: drop-shadow(0 10px 26px rgba(0,0,0,.60));
 }
 
-/* BIG hero logo */
 .logo--hero{
   height: 320px;
   max-width: min(92vw, 1100px);
   width: auto;
 }
 
-/* Mobile tweaks */
 @media (max-width: 520px){
   .wordmark .name{ font-size: 44px; }
   .wordmark .name .name-underline{ margin-top: 8px; height: 2px; }
