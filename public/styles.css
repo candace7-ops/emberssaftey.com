@@ -74,8 +74,8 @@ body{
 
 .wordmark .name .name-underline{
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: calc(1ch + .08em);
   width: 18px;
   height: 2px;
   background: var(--accent);
@@ -235,7 +235,11 @@ body{
 
 @media (max-width: 520px){
   .wordmark .name{ font-size: 44px; padding-bottom: 10px; }
-  .wordmark .name .name-underline{ width: 14px; height: 2px; }
+  .wordmark .name .name-underline{
+    left: calc(1ch + .08em);
+    width: 14px;
+    height: 2px;
+  }
   .wordmark .acronym{ font-size: 13px; }
   .cta-row{ margin-top: 42px; }
   .simple-blurb{ font-size: 16px; margin-top: 18px; }
