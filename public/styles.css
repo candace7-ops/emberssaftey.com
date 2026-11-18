@@ -68,15 +68,18 @@ body{
   font-weight: 600;
   line-height: 1;
   display: inline-block;
-  position: relative;
-  padding-bottom: 12px;
 }
 
-.wordmark .name .name-underline{
+.wordmark .name .e2{
+  position: relative;
+  display: inline-block;
+}
+
+.wordmark .name .e2 .e2-underline{
   position: absolute;
-  bottom: 0;
-  left: calc(1ch + .08em);
-  width: 18px;
+  left: 0;
+  right: 0;
+  bottom: -12px;
   height: 2px;
   background: var(--accent);
   border-radius: 999px;
@@ -234,12 +237,8 @@ body{
 }
 
 @media (max-width: 520px){
-  .wordmark .name{ font-size: 44px; padding-bottom: 10px; }
-  .wordmark .name .name-underline{
-    left: calc(1ch + .08em);
-    width: 14px;
-    height: 2px;
-  }
+  .wordmark .name{ font-size: 44px; }
+  .wordmark .name .e2 .e2-underline{ bottom: -10px; height: 2px; }
   .wordmark .acronym{ font-size: 13px; }
   .cta-row{ margin-top: 42px; }
   .simple-blurb{ font-size: 16px; margin-top: 18px; }
