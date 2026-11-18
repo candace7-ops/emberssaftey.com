@@ -73,8 +73,7 @@ body{
 .wordmark .name .name-underline{
   display:block;
   margin-top: 10px;
-  width: 1.4em;
-  max-width: 120px;
+  width: 100%;
   height: 2px;
   background: var(--accent);
   border-radius: 999px;
@@ -242,7 +241,3 @@ body{
   .void{ flex: 0.10; min-height: 0; }
   .logo--hero{ height: 210px; }
 }
-
-After you commit/publish those two public files, check:
-view-source:https://www.emberssafety.com/
-Search for: name-underline
